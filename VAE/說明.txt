@@ -1,0 +1,17 @@
+這是訓練VAE Model
+VAE Model總共訓練 200 epochs
+
+**訓練資料集**
+訓練樣本數=5381
+測試樣本數=1451
+
+**0108VAE_road**
+1~200次的訓練結果圖
+
+**train_vae**
+訓練VAE的主程式
+
+**PKL FILE**
+VAE Model
+
+https://github.com/ian0/donkeycar-rl/tree/main/autoencoder
