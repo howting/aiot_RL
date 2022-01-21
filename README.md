@@ -34,5 +34,17 @@ Deep Q Network（DQN）結構如圖2所示，以當前CarRacing的連續3個頂�
 
 ![DQN](https://github.com/howting/aiot_RL/blob/main/271392482_517707269499426_2485185398425252968_n.png?raw=true)
 
+### donkey car
+本計畫研究議題相當重要並具有影響力，2018 年 12 月立法院三讀通過《無人載具科技 創新實驗條例》，明訂結合人工智慧無人駕駛的車輛、船舶、航空器的移動載具可申請實驗，於核准範圍內可排除道路交通管理處罰條例、船舶法、民用航空法部分條文規範，鼓勵投入無人載具實驗。像是 Google 無人車、無人觀光船都可以上路測試。以無人車來說，無人車產業包括軟體和硬體是上兆美元的產業。因此更需要相關的人才，另外一方面，行政院在台南高鐵站特定區新建國內首座封閉式自駕車試驗場域。
+目前這個領域最有名的自動駕駛模型車有麻省理工學院的 Duckiebot 小鴨車、Donkey Car 驢車、NVIDIA 的 JetBot、亞馬遜的 AWS DeepRacer、Self Driving RC Car等。 這些都是開放原始碼，為感興趣者提供充滿創意、樂趣的學習自動駕駛與人工智慧。
+Donkey Car是Adam Conway在2017年發起的專案，他們一開始是想做一個縮小版的自走車，因此使用1/10比例的RC車作為車體，並用OpenCV裡的車道跟隨技術，但他的夥伴Will Roscoe希望能像Google和Tesla一樣可以使用深度學習技術打造自動駕駛系統，因此Donkey Car就加入了神經網路模型。
+Donkey Car是一個開源機器學習的自走車專案，車上唯一的感測器就是相機。藉由操作Donkey Car，我們可以將機器學習的過程跑一遍，包括訓練資料蒐集與處理、模型選擇與調整、實機訓練、測試驗證等。從無到有瞭解機器學習的原理，並操作整個過程，最後透過車輛的自走看到實際的成果。而最有趣的地方不只是機器學習的部份，我們可以自由的改裝車上的硬體或是修改車道的設計比較各項變化，這都能讓我們離真實的自駕車更靠近。
+#### VAE
+![VAE](https://github.com/howting/aiot_RL/blob/main/VAE/1.png?raw=true)
+#### PPO
+![PPO](https://github.com/howting/aiot_RL/blob/main/PPO/2.png?raw=true)
+#### 實驗結果
+![VAE](https://github.com/howting/aiot_RL/blob/main/1.png?raw=true)
+![PPO](https://github.com/howting/aiot_RL/blob/main/2.png?raw=true)
 ## 結論
 在DQN的訓練中車子會隨著學習的迭帶次數增加，而逐漸的變化，因為要取得更多的獎勵，開始會抄捷徑，為了以更快的速度轉彎而有些許的偏離跑道。然而因為每一個回合中的地圖都是隨機生成的，容易導致DQN原本所學習的策略無法即時進行調整，因此訓練過程中的獎勵值浮動會非常的大，若是剛好遇到不是用的地圖可能就會得到非常低的獎勵，必須重新學習。
