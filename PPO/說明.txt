@@ -1,0 +1,13 @@
+這是使用PPO強化學習演算法訓練Donkey car
+
+**訓練影片**
+PPO訓練
+影片數字是回合數
+
+**drive_with_policy.py**
+駕駛Donkey Car By Policy
+
+**ppo_donkeycar.zip**
+train-ppo-with-eval.py 訓練完成後的PPO Model。
+
+https://github.com/ian0/donkeycar-rl
